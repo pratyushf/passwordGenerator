@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="pwd.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Kalam:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="container-head">PASSWORD GENERATOR</h3>
+
+      <div class="container-display">
+        <input type="text" readonly id="genpwd" />
+        <button id="copypwd">
+          <span id="copytxt"></span>
+          <i class="fa-solid fa-copy" style="color: #85aef9" id="copycon"></i>
+        </button>
+      </div>
+
+      <div class="container-input">
+        <div class="container-length">
+          <p>Password Length : </p> 
+          <p id="length">0</p>
+        </div>
+        <input type="range" min="1" max="20" id="slider" value="5" step="1" />
+      </div>
+
+      <div class="container-checkbox">
+        <div>
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Include Uppercase Letters</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Include Lowercase Letters</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Include Numbers</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Include Symbols</label>
+        </div>
+      </div>
+
+      <div class="container-strength">
+        <p>Strength :</p>
+        <div id="color"></div>
+      </div>
+
+      <div class="container-generate">
+        <button class="generate">Generate Password</button>
+      </div>
+
+    </div>
+    <script src="pwd.js"></script>
+  </body>
+</html>
